@@ -12,7 +12,7 @@ class GCodeEncoder:
         self.pin_button = config.get('pin_button')
         self.pin_a = config.get('pin_a')
         self.pin_b = config.get('pin_b')
-        self.steps_per_detent = config.get('steps_per_detent')
+        self.steps_per_detent = config.getint('steps_per_detent')
         self.last_state = 0
         buttons = self.printer.load_object(config, "buttons")
 
